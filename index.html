@@ -22,7 +22,7 @@
             <!-- FILTER -->
             <div class="filter">
                 Filter by genre:
-                <select>
+                <select @change='filterGenre' v-model='default'>
                     <option value="All">All</option>
                     <option value="Rock">Rock</option>
                     <option value="Pop">Pop</option>
@@ -34,7 +34,13 @@
             <main>
                 <ul v-if='albums.length > 0' class="catalog">
                     <li v-for='album in albums'>
-
+                        <div class="poster">
+                            <img :src="album.poster" :alt="album.title">
+                        </div>
+                        <h2 class="title">{{ album.title }}</h2>
+                        <h3 class="author">{{ album.author }}</h3>
+                        <h4 class="genre">{{ album.genre }}</h4>
+                        <h5 class="year">{{ album.year }}</h5>
                     </li>
                 </ul>
                 <h2 v-else>

@@ -5,10 +5,13 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+h2 {
+    color: #fff;
+}
 /* LAYOUT */
 .container {
     background-color: #1E2D3B;
-    height: 100vh;
 }
 /* LOGO */
 .container .logo {
@@ -32,4 +35,23 @@
     list-style: none;
     flex-wrap: wrap;
     padding: 20px;
+    justify-content: center;
+}
+
+.container .catalog li {
+    flex-basis: 200px;
+    background-color: #2E3A46;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container .catalog li .poster {
+    min-height: 200px;
+}
+
+.container .catalog li .poster img {
+    width: 100%;
 }
