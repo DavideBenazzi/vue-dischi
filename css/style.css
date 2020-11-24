@@ -6,8 +6,16 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
+h2,
+h5 {
     color: #fff;
+    margin-bottom: 10px;
+}
+
+h3,
+h4 {
+    color: #808080;
+    margin-bottom: 10px;
 }
 /* LAYOUT */
 .container {
@@ -29,6 +37,11 @@ h2 {
     color: #fff;
     padding: 50px;
 }
+
+.container .filter select {
+    margin-left: 10px;
+    border-radius: 4px;
+}
 /* CATALOG */
 .container .catalog {
     display: flex;
@@ -49,7 +62,7 @@ h2 {
 }
 
 .container .catalog li .poster {
-    min-height: 200px;
+    min-height: 180px;
 }
 
 .container .catalog li .poster img {
