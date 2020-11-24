@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- VUE -->
@@ -11,8 +14,37 @@
 <body>
     <!-- VUE APP -->
     <div id="app">
+        <div class="container">
+            <!-- LOGO -->
+            <header class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </header>
+            <!-- FILTER -->
+            <div class="filter">
+                Filter by genre:
+                <select>
+                    <option value="All">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+            </div>
+            <!-- CATALOG -->
+            <main>
+                <ul v-if='albums.length > 0' class="catalog">
+                    <li v-for='album in albums'>
 
+                    </li>
+                </ul>
+                <h2 v-else>
+                    Loading, please wait...
+                </h2>
+            </main>
+        </div>
     </div>
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- JAVASCRIPT -->
     <script src="./js/main.js" charset="utf-8"></script>
 </body>
