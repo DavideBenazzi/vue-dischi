@@ -20,6 +20,7 @@ h4 {
 /* LAYOUT */
 .container {
     background-color: #1E2D3B;
+    min-height: 100vh;
 }
 /* LOGO */
 .container .logo {
